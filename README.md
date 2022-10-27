@@ -4,7 +4,8 @@ Parallel convert from Pascal VOC format to tfrecord format for [Object Detection
 
 ## Example
 
-![vaik-pascalvoc2tfrecord-mp](https://user-images.githubusercontent.com/116471878/198181345-336722ea-91f4-4999-a998-0c798887c6d0.png)
+![vaik-pascalvoc2tfrecord-mp](https://user-images.githubusercontent.com/116471878/198183072-c26bac61-1652-40c9-a2f6-9100bb12fb2c.png)
+
 
 ## Usage
 
