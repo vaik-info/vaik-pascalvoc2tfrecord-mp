@@ -24,7 +24,7 @@ def split(a_list, split_num):
         result_list[index % split_num].append(an_elem)
     return result_list
 
-def main(input_image_dir_path, input_classes_path, output_dir_path, records_prefix_index, cpu_count):
+def main(input_dir_path, input_classes_path, output_dir_path, records_prefix_index, cpu_count):
     os.makedirs(output_dir_path, exist_ok=True)
 
     classes = []
@@ -35,7 +35,7 @@ def main(input_image_dir_path, input_classes_path, output_dir_path, records_pref
     types = ('*.jpg', '*.jpeg', '*.png', '*.JPG', '*.JPEG', '*.PNG')
     image_path_list = []
     for files in types:
-        image_path_list.extend(glob.glob(os.path.join(input_image_dir_path, files), recursive=True))
+        image_path_list.extend(glob.glob(os.path.join(input_dir_path, files), recursive=True))
 
     image_xml_path_list = []
     for image_path in image_path_list:
