@@ -76,6 +76,6 @@ def pascal_voc2tf_example(image_path, xml_path, classes, random_quality=(90, 100
         'image/object/bbox/ymin': float_list_feature(y_min_array.stack().numpy().ravel().tolist()),
         'image/object/bbox/ymax': float_list_feature(y_max_array.stack().numpy().ravel().tolist()),
         'image/object/class/text': bytes_list_feature(classes_text),
-        'image/object/class/label': int64_list_feature(class_index_array.stack()),
+        'image/object/class/label': int64_list_feature(class_index_array.stack().numpy().ravel().tolist()),
     }))
     return tf_example
