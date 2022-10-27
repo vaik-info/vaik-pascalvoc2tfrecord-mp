@@ -18,6 +18,21 @@ python main.py --input_dir_path ~/.vaik-mnist-detection-dataset/train \
                 --cpu_count 32
 ```
 
+- example)classes.txt
+
+```
+zero
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+```
+
 ## Output
 
 ![vaik-pascalvoc2tfrecord-mp-out](https://user-images.githubusercontent.com/116471878/198181347-5ae5a8d5-f336-4643-b93f-2c1edb63f54b.png)
