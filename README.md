@@ -11,7 +11,7 @@ Parallel convert from Pascal VOC format to tfrecord format for [Object Detection
 
 ```shell
 pip install -r requirements.txt
-python main.py --input_image_dir_path ~/.vaik-mnist-detection-dataset/train \
+python main.py --input_dir_path ~/.vaik-mnist-detection-dataset/train \
                 --input_classes_path ~/.vaik-mnist-detection-dataset/classes.txt \
                 --output_dir_path ~/.vaik-pascalvoc2tfrecord-mp/vaik-mnist-detection-dataset/train \
                 --records_prefix_index 00 \

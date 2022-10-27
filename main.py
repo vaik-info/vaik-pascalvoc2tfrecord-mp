@@ -57,7 +57,7 @@ def main(input_image_dir_path, input_classes_path, output_dir_path, records_pref
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='main')
-    parser.add_argument('--input_image_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/train')
+    parser.add_argument('--input_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/train')
     parser.add_argument('--input_classes_path', type=str,
                         default='~/.vaik-mnist-detection-dataset/classes.txt')
     parser.add_argument('--output_dir_path', type=str,
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     parser.add_argument('--cpu_count', type=int, default=cpu_count())
     args = parser.parse_args()
 
-    args.input_image_dir_path = os.path.expanduser(args.input_image_dir_path)
+    args.input_dir_path = os.path.expanduser(args.input_dir_path)
     args.input_classes_path = os.path.expanduser(args.input_classes_path)
     args.output_dir_path = os.path.expanduser(args.output_dir_path)
 
