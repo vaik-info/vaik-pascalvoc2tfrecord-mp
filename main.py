@@ -10,7 +10,7 @@ from io_tfrecords import pascal_voc2tf_example
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 def write(image_xml_path_list, output_dir_path, classes, proc_num, records_prefix_index):
-    tf_record_writer = tf.io.TFRecordWriter(os.path.join(output_dir_path, f"records-{records_prefix_index}{proc_num:03d}"))
+    tf_record_writer = tf.io.TFRecordWriter(os.path.join(output_dir_path, f"dataset.tfrecords-{records_prefix_index}{proc_num:03d}"))
     for image_path, xml_path in tqdm(image_xml_path_list):
         example = pascal_voc2tf_example(image_path, xml_path, classes)
         tf_record_writer.write(example.SerializeToString())
